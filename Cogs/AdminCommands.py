@@ -181,24 +181,6 @@ class AdminCommands(commands.Cog):
         else:
             await interaction.channel.send(f'Cleared {role.mention} from {", ".join(cleared_members)}')
 
-    @app_commands.command(description="downloads a given number of corgi pictures")
-    @app_commands.default_permissions(administrator=True)
-    async def downloadcorgis(self, interaction:discord.Interaction, amount:int):
-        """Downloads a given number of corgi pictures.
-        Convert user input to an integer. If this is not possible, set the amount of pictures as 100.
-        Call the download_corgies method from utils.py. Log the user and number of images downloaded.
-
-        Args:
-            amount (int): Number of pictures/pieces of media being downloaded
-
-        Outputs:
-            Message to log stating the user that executed the command and how many images were downloaded
-            Message to user stating numer of images downloaded
-        """
-
-        await download_corgis(self.bot, interaction, amount)
-    
-
     @app_commands.command(description="outputs all messages from a specified user after a specified date with some metadata to a file")
     @app_commands.default_permissions(administrator=True)
     async def history(self, interaction:discord.Interaction, username:str):

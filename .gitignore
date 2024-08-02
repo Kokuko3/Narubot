@@ -1,2 +1,17 @@
-/discordbot_sandbox
+# Secrets            #
+######################
+*.env
+
+# Container         #
+# ####################
 *.sif
+
+# Folders            #
+######################
+*__pycache__/
+
+# Logs               #
+######################
+log
+*.swp
+status.txt
