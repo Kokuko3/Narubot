@@ -48,7 +48,7 @@ async def on_ready():
 
     # Show the bot as online
     # If the bot had a status prior to shutting down, restore it
-    # if it didn't, set it to 'Raider Up!'
+    # if it didn't, set it to 'Believe it!'
 
     try:
         async with aiofiles.open('status.txt', mode='r') as sf:
